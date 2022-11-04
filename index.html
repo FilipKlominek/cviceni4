@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
+    <!-- Přidávat babel link -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="styles.css"/>
+    <!-- Tady se přidal type JSX -->
+    <script type="text/jsx">
+        const rootElement = document.getElementById('root');
+        const root = ReactDOM.createRoot(rootElement)
+
+        function Cat() {
+            return <img src="https://placekitten.com/g/400/300" alt="Kočička"/>;
+        }
+
+        function Header() {
+            return <h1>This is a header</h1>
+        }
+
+        function Text() {
+            return <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in ex sagittis, pretium est eu,
+                aliquet odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Donec elit augue, rutrum et luctus ut, dictum eu nibh.</p>;
+        }
+
+        function Button() {
+            return <button>Button</button>
+        }
+
+
+        function Card() {
+            return (<div>
+                <Cat/>
+                <Header/>
+                <Text/>
+                <Button/>
+            </div>)
+        }
+
+        root.render(<>
+            <Card/>
+            <Card/>
+            <Card/>
+        </>)
+
+
+    </script>
+</head>
+<body>
+<div id="root"></div>
+</body>
+</html>
